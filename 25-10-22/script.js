@@ -12,7 +12,7 @@ function myFunction() {
     "Bravissimo. Infine scegli una delle seguenti operazioni matematiche: \n- addizione\n- sottrazione\n- moltiplicazione\n- divisione"
   );
 
-  //--OPERATORI CONDIZIONALI
+  //--OPERATORI CONDIZIONALI 
 
   if (
     operator.toLowerCase() === "addizione" &&
