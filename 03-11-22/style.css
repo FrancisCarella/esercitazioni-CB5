@@ -1,0 +1,245 @@
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-color: #ffffff;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+#home {
+  max-width: 1200px;
+  align-items: center;
+  margin: auto;
+  padding: 0 15px;
+}
+
+h1,
+h2 {
+  letter-spacing: 5px;
+}
+
+#scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #333333;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+#scroll-top a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-bar {
+  background-color: #ffffff;
+  display: flex;
+  position: relative;
+  align-items: baseline;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-bar-brand a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 2rem;
+  transition: ease all 0.35s;
+}
+
+.nav-bar-brand a:hover {
+  color: #ababab;
+}
+
+.nav-bar-link ul {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.nav-bar-link a {
+  text-decoration: none;
+  color: #8b8b8b;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+}
+
+.nav-bar-link a:hover {
+  color: #000000;
+  font-weight: bold;
+  border-bottom: 1px solid #000000;
+}
+
+.hero {
+  height: 95vh;
+  width: 100%;
+}
+
+.hero-caption {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 40%;
+  left: 18%;
+  width: fit-content;
+  padding: 30px;
+  font-size: 1.5rem;
+}
+
+.hero-content h5,
+h1,
+p {
+  margin: 10px 0px;
+}
+
+.hero-content button {
+  margin-top: 20px;
+}
+
+.slider-1 {
+  background: rgba(0, 0, 0, 0) url(./img/hero-bg-ph.jpg) repeat scroll right top /
+    cover;
+  height: 95vh;
+}
+
+.btn-dark {
+  background: #000000;
+  border-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: ease all 0.35s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-dark a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background: #ffffff;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-dark a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+.my-social {
+  display: flex;
+  background-color: rgba(33, 33, 33, 0.347);
+  margin-top: 78vh;
+  padding: 0px 40px;
+}
+
+.my-social-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.my-social-bar-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.my-social-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: ease all 0.35s;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.my-social-bar a:hover {
+  font-weight: bold;
+}
+
+/* PORTFOLIO SECTION */
+
+#portfolio {
+   display: flex;
+  flex-direction:column
+}
+
+.portfolio-title {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 560px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+.card h1,
+.card p {
+  padding: 6px 16px;
+}
+
+.card img {
+  width: 100px;
+  align-self: center;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 767px) {
+  .hero-caption {
+    top: 40%;
+    left: 5%;
+    width: fit-content;
+    padding: 25px;
+    font-size: 1.2rem;
+  }
+
+  .my-social-bar a {
+    color: #ffffff;
+    transition: ease all 0.35s;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}
