@@ -1,9 +1,7 @@
+import projects from "./portfolio.js";
 
-let mybutton = document.getElementById("scroll-top");
-
-window.onscroll = function () {
-  scrollFunction();
-};
+// BUTTON SCROLL UP
+const mybutton = document.getElementById("scroll-top");
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -13,10 +11,9 @@ function scrollFunction() {
   }
 }
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+window.onscroll = function () {
+  scrollFunction();
+};
 
 window.onscroll({
   top: 0,
@@ -24,22 +21,20 @@ window.onscroll({
   behavior: "smooth",
 });
 
-import projects from "./portfolio.js";
+// PORTFOLIO SECTION
+const PortTitEl = document.querySelector(".portfolio-title"); //Richiedo la creazione della constante x e di assegnare alla costante la classe y
 
 const createCard = (title, imgUrl, description, category, parent) => {
   const cardEl = document.createElement("div");
 
   cardEl.className = "card";
-
   // title
-  const titleEl = document.createElement("h1");
+  const titleEl = document.createElement("h2");
   titleEl.textContent = title;
-
   // img
   const imgEl = document.createElement("img");
   imgEl.setAttribute("src", imgUrl);
   imgEl.setAttribute("alt", category);
-
   // paragraph
   const parEl = document.createElement("p");
   parEl.textContent = description;
@@ -48,22 +43,21 @@ const createCard = (title, imgUrl, description, category, parent) => {
   parent.appendChild(cardEl);
 };
 
-const PortTitEl = document.querySelector(".portfolio-title");
-
-const headerPortTit = document.createElement("h1");
-
-headerPortTit.style = "background-color: black; color:white; padding:10px";
-headerPortTit.textContent = "PORTFOLIO";
-
-PortTitEl.appendChild(headerPortTit);
-
 projects
-  .filter((project) => project.title === "Exemple6")
+  // .filter((project) => project.title === "Exemple6")
   .map((project) => {
     createCard(
       project.title,
       project.image,
       project.description,
       project.category,
+      PortTitEl
     );
   });
+
+// const headerPortTit = document.createElement("h1");
+
+// headerPortTit.style = "background-color: black; color:white; padding:10px";
+// headerPortTit.textContent = "PORTFOLIO";
+
+// PortTitEl.appendChild(headerPortTit);

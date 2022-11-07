@@ -13,11 +13,11 @@
 </head>
 
 <body id="home">
-    <button onclick="topFunction()" id="scroll-top"><a href="index.html">⬆</a></button>
+    <button onclick="topFunction()" id="scroll-top"><a href="#home">⬆</a></button>
     <!-- Header -->
-    <header>
+    <header class="navheader">
         <nav>
-            <div class="nav-bar">
+            <div class="inner nav-bar">
                 <!-- Brand -->
                 <div class="nav-bar-brand">
                     <h2><a href="index.html">FDCC</a></h2>
@@ -62,10 +62,10 @@
                     <div class="my-social">
                         <div class="my-social-bar">
                             <div class="my-social-bar-content">
-                                <a href="https://it-it.facebook.com/FrancescoDeCaroCarella" Target= "_blank">Facebook</a>
-                                <a href="https://www.instagram.com/francis_carella/" Target= "_blank">Instagram</a>
-                                <a href="https://it.linkedin.com/in/francescodecarocarella" Target= "_blank">Linkedin</a>
-                                <a href="https://github.com/FrancisCarella/" Target= "_blank">Github</a>
+                                <a href="https://it-it.facebook.com/FrancescoDeCaroCarella" Target="_blank">Facebook</a>
+                                <a href="https://www.instagram.com/francis_carella/" Target="_blank">Instagram</a>
+                                <a href="https://it.linkedin.com/in/francescodecarocarella" Target="_blank">Linkedin</a>
+                                <a href="https://github.com/FrancisCarella/" Target="_blank">Github</a>
                             </div>
                         </div>
                     </div>
@@ -75,45 +75,40 @@
         </section>
         <!-- End Hero Section -->
         <!-- About Me Section -->
-        <section style="display:none">
-        <section id="aboutme">
-            <div class="">
-                <div class="">
-                    <img src="" title="" alt="">
-                </div>
-                <div class="">
-                    <div class="">
-                        <h3 class="h1">I'm a Freelancer Designer and Front-end Developer with over 1 year of experience.
-                        </h3>
-                        <p>I'm from Palermo. I love coding and creating web elements. I like work with new people and
-                            make new experiences.</p>
-                        <div class="">
-                            <div class="">
-                                <h5>100+</h5>
-                                <span>Project Completed</span>
-                            </div>
-                            <div class="">
-                                <h5>20+</h5>
-                                <span>Happy Clients</span>
-                            </div>
-                        </div>
-                        <div class="">
-                            <button class="">
-                                <a href="#contactme">Contact Me</a>
-                            </button>
-                            <button class="">
-                                <a href="#portfolio">Contact Now</a>
-                            </button>
-                        </div>
+        <section id="aboutme" class="inner">
+            <div class="about-item-image">
+                <img src="./img/aboutme.png" title="About Me" alt="About Me">
+            </div>
+            <div class="about-item-content">
+                <h3>I'm a Freelancer Designer and Front-end Developer with over 1 year of experience.
+                </h3>
+                <p>I'm from Palermo. I love coding and creating web elements. I like work with new people and
+                    make new experiences.</p>
+                <div class="about-contact-btn">
+                    <div class="about-contact-btn-first">
+                        <h5>100+</h5>
+                        <span>Project Completed</span>
+                        <button class="btn-dark">
+                            <a href="#contactme">Contact Me</a>
+                        </button>
+                    </div>
+                    <div class="about-contact-btn-second">
+                        <h5>20+</h5>
+                        <span>Happy Clients</span>
+                        <button class="btn-dark">
+                            <a href="#portfolio">Contact Now</a>
+                        </button>
                     </div>
                 </div>
+            </div>
+            </div>
             </div>
             </div>
         </section>
         <!-- End About Me Section -->
         <!-- Services Section -->
-        <section>
-            <div class="container">
+        <!-- <section class="inner">
+            <div class="">
                 <div class="section-heading">
                     <h3><span>My Services</span></h3>
                 </div>
@@ -150,10 +145,10 @@
                 </div>
             </div>
             </div>
-        </section>
+        </section> -->
         <!-- End Services Section -->
         <!-- Skill Section -->
-        <section>
+        <!-- <section class="inner">
             <div class="container">
                 <div class="section-heading">
                     <h3><span>My Skills</span></h3>
@@ -182,35 +177,37 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- End Skill Section -->
-        </section>
         <!-- Portfolio Section -->
         <section id="portfolio">
-            <div class="portfolio-title"></div>
+            <div class="portfolio-containter">
+                <h1>PORTFOLIO</h1>
+                <div class="portfolio-title"></div>
+            </div>
         </section>
         <!-- End Portfolio Section -->
     </main>
     <!-- End Main -->
     <!-- Footer -->
-<footer>
-    <div class="footer">
-        <span>Facebook</span>
-        <span>Instagram</span>
-        <span>Linkedin</span>
-        <span>Website</span>
-    </div>
-                    <div class="">
-                        <ul>
-                            <li><a href="#home"><span>Home</span></a></li>
-                            <li><a href="#aboutme"><span>About Me</span></a></li>
-                            <li><a href="#services"><span>Services</span></a></li>
-                            <li><a href="#portfolio"><span>Portfolio</span></a></li>
-                        </ul>
-                    </div>
-    <div class="">
-        <p>Made with ❤️ by Fdcc<br>Copyright 2022 ®</p>
-</footer>
+    <footer>
+        <div class="footer">
+            <span>Facebook</span>
+            <span>Instagram</span>
+            <span>Linkedin</span>
+            <span>Website</span>
+        </div>
+        <div class="">
+            <ul>
+                <li><a href="#home"><span>Home</span></a></li>
+                <li><a href="#aboutme"><span>About Me</span></a></li>
+                <li><a href="#services"><span>Services</span></a></li>
+                <li><a href="#portfolio"><span>Portfolio</span></a></li>
+            </ul>
+        </div>
+        <div class="">
+            <p>Made with ❤️ by Fdcc<br>Copyright 2022 ®</p>
+    </footer>
     <!-- End Footer -->
 </body>
 
