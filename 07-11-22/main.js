@@ -9,7 +9,7 @@
 //   .then(response => response.json())
 //   .then(result => /* processa qui il result */)
 
-// INFO PROFESSORE
+// INFO PROFESSORE (ti prego, chiamami Emanuele xD)
 // fetch("https://jsonplaceholder.typicode.com/posts")
 //   .then((res) => res.json())
 //   .then((data) => console.log("data:", data))
