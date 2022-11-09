@@ -28,10 +28,9 @@ main {
 .loading-a {
   display: flex;
   width: 250px;
-  margin: 0;
+  margin: 100% 0;
   justify-content: center;
   align-items: center;
-  padding: 100%;
 }
 
 .card {
