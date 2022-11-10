@@ -92,6 +92,7 @@ footer {
   }
 
   #card {
+    margin: 30vh auto;
     max-width: 400px;
   }
 
