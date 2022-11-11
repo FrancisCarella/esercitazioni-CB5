@@ -1,3 +1,5 @@
+const spinner = document.querySelector(".lds-hourglass");
+
 /**
  * Creo la funzione getAdvise
  */
@@ -9,6 +11,7 @@ function getAdvice() {
       document.querySelector(".advice-text").innerHTML = info.slip.advice; //definisco il testo dell'advice e le sue proprietà descritte nella relativa classe
       document.querySelector(".advice-number").innerHTML = info.slip.id; //definisco il numero id dell'advice e le sue proprietà descritte nella relativa classe
     })
+    .finally(() => spinner.classList.toggle(".lds-hourglass-active"))
     .catch((e) => console.log("Error:" + e));
 }
 /**
