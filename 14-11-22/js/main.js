@@ -1,9 +1,5 @@
 import { q, getId, GET } from './utils.js'
 
-const str = "flexiple";
-const str2 = str.charAt(0).toUpperCase() + str.slice(1);
-console.log(str2);
-
 const postId = q(".post-id")
 const userAvatar = q(".user-avatar")
 const postTitle = q(".post-title")
@@ -49,28 +45,31 @@ const getPost = (instruction) => {
 
 	GET(`${url}/${index}`)
 		.then(res => {
-			postId.textContent = `Post n° ${getId(res?.id)}`;
-			postTitle.textContent = res?.title;
-			userId.textContent = `User ${getId(res?.id)}`;
-			postBody.textContent = res?.body;
-			userAvatar.setAttribute("src", "./img/avatar_placeholder.png");
+      postId.textContent = `Post n° ${getId(res?.id)}`;
+      postTitle.textContent = res?.title[0].toUpperCase() + res?.title.slice(1); //Inserimento del titolo con la prima lettera maiuscola
+      userId.textContent = `User ${getId(res?.id)}`;
+      postBody.textContent = res?.body[0].toUpperCase() + res?.body.slice(1); //Inserimento del testo con la prima lettera maiuscola
+      userAvatar.setAttribute(
+        "src",
+        `https://picsum.photos/200?${getId(res?.id)}` //Inserimento del titolo con la prima lettera maiuscola
+      );
 
-			if (index <= 1) {
-				btnPrev.disabled = true;
-				btnPrev.classList.add("disabled")
-			} else {
-				btnPrev.disabled = false;
-				btnPrev.classList.remove("disabled")
-			}
+      if (index <= 1) {
+        btnPrev.disabled = true;
+        btnPrev.classList.add("disabled");
+      } else {
+        btnPrev.disabled = false;
+        btnPrev.classList.remove("disabled");
+      }
 
-			if (index >= 10) {
-				btnNext.disabled = true;
-				btnNext.classList.add("disabled")
-			} else {
-				btnNext.disabled = false;
-				btnNext.classList.remove("disabled")
-			}
-		})
+      if (index >= 10) {
+        btnNext.disabled = true;
+        btnNext.classList.add("disabled");
+      } else {
+        btnNext.disabled = false;
+        btnNext.classList.remove("disabled");
+      }
+    })
 }
 
 window.onload = getPost();
