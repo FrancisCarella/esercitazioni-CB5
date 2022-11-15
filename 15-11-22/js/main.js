@@ -44,12 +44,11 @@ const createCard = (res) => {
 
   nameEl.textContent = res.name;
   typeEl.textContent = res.type;
-  imgEl.setAttribute("src", "avatar_placeholder.png");
+  imgEl.setAttribute("src", "../img/avatar_placeholder.png");
   imgEl.setAttribute("alt", "image");
 
   cardEl.append(nameEl, typeEl, imgEl);
   container.append(cardEl);
-  bodyEl.append(container);
 };
 
 window.onload = GET(url).then((res) => res.map((res) => createCard(res)));
