@@ -3,17 +3,17 @@
     {
       "id": 1,
       "name": "Bulbasaur",
-      "type": "Erba"
+      "type": "Grass"
     },
     {
       "id": "2",
       "name": "Blastoise",
-      "type": "Acqua"
+      "type": "Water"
     },
     {
       "id": "3",
       "name": "Charizard",
-      "type": "Fuoco"
+      "type": "Fire"
     }
   ]
 }

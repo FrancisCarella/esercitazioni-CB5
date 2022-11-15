@@ -7,6 +7,7 @@ const container = q(".pokemon_container");
 
 const ul = q(".pokemonList");
 
+//FORM SUBMIT
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const data = {
@@ -25,30 +26,38 @@ form.addEventListener("submit", (e) => {
     });
 });
 
+//FORM LIST
 window.onload = GET(url).then((res) =>
   res.map(
     (pkm) => (ul.innerHTML += `<li>#${pkm.id} ${pkm.name}, ${pkm.type}</li>`)
   )
 );
 
+//CARD CREATION
 const createCard = (res) => {
   const cardEl = c("div");
-  const nameEl = c("h1");
-  const typeEl = c("h2");
-  const imgEl = c("img");
-
   cardEl.className = "card";
+  cardEl.classList.add(`bg-${res?.type[0].toLowerCase() + res?.type.slice(1)}`); //Classe per assegnare il background-color
+
+  const imgEl = c("img");
+  const idEl = c("p");
+  const nameEl = c("h1");
+  const typeEl = c("p");
+
+  idEl.className = "pokemon-id";
+  imgEl.className = "img";
   nameEl.className = "pokemon_name";
   typeEl.className = "pokemon_type";
-  imgEl.className = "img";
 
+  idEl.textContent = "# " + res.id; 
   nameEl.textContent = res.name;
-  typeEl.textContent = res.type;
-  imgEl.setAttribute("src", "../img/avatar_placeholder.png");
+  typeEl.textContent = `Type: ${res.type}`;
+  imgEl.setAttribute("src", `https://picsum.photos/200?${(res?.id)}`);
   imgEl.setAttribute("alt", "image");
 
-  cardEl.append(nameEl, typeEl, imgEl);
+  cardEl.append(imgEl, idEl, nameEl, typeEl);
   container.append(cardEl);
-};
+};;
 
+//CARD LIST
 window.onload = GET(url).then((res) => res.map((res) => createCard(res)));
