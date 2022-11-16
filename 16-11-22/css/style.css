@@ -32,7 +32,6 @@ header img {
 /* SECTION */
 
 .container {
-  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -255,7 +254,11 @@ footer {
 
 @media (min-width: 728px) {
   body {
-    background: url("../img/pkm-bg.webp") center 20% repeat;
-    background-size: cover;
+    background: url("../img/pkm-bg.webp") center 100% repeat;
+    background-size: contain;
   }
+  .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
 }

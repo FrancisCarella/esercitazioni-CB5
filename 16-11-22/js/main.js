@@ -10,7 +10,6 @@ const container = q(".pokemon_container");
 
 const ul = q(".pokemon_list");
 
-
 //FORM SUBMIT
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -29,6 +28,14 @@ form.addEventListener("submit", (e) => {
       console.error("Error:", error);
     });
 });
+
+//FORM CHECK IMPUT
+const input = document.querySelector("input");
+input.addEventListener("keyup", checkInput);
+function checkInput() {
+  if (!/^[a-z0-9]*$/i.test(this.value))
+    alert("Carattere non consentito!"), location.reload();
+};
 
 //FORM LIST
 window.onload = GET(url).then((res) =>
