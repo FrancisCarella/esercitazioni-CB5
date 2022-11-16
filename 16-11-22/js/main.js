@@ -2,18 +2,22 @@ import { GET, POST, DELETE } from "./api.js";
 import { c, q} from "./utils.js";
 const url = "http://localhost:3000/pokemon";
 
+let id;
+
 const form = document.forms.pokemon;
 const element = form.elements;
 const container = q(".pokemon_container");
 
 const ul = q(".pokemon_list");
 
+
 //FORM SUBMIT
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const data = {
+    id: id+1,
     name: element.pkmName.value,
-    type: element.pkmType.value,
+    type: element.pkmType.value
   };
 
   POST(url, data)
@@ -67,6 +71,13 @@ const createCard = (res, parent) => {
 };
 
 //CARD LIST
-window.onload = GET(url).then((res) =>
-  res.map((res) => createCard(res, container))
-);
+// window.onload = GET(url).then((res) =>
+//   res.map((res) => createCard(res, container))
+// );
+
+window.onload = GET(url).then((res) => {
+  id = res[res.length-1].id;
+  res.map((res) => {
+    createCard(res, container);
+  });
+});

@@ -1,17 +1,17 @@
 {
   "pokemon": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Bulbasaur",
       "type": "Grass"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Charizard",
       "type": "Fire"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "Blastoise",
       "type": "Water"
     }
