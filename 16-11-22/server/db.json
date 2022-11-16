@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Blastoise",
       "type": "Water"
+    },
+    {
+      "id": 4,
+      "name": "Charmender",
+      "type": "Fire"
     }
   ]
 }

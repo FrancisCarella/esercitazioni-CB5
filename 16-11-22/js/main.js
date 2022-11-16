@@ -47,7 +47,7 @@ const createCard = (res, parent) => {
   const btnEl = c("button");
 
   cardEl.className = "card";
-  cardEl.classList.add(`bg-${res?.type[0].toLowerCase() + res?.type.slice(1)}`); //Classe per assegnare il background-color
+  cardEl.classList.add(`bg-${res?.type[0].toLowerCase().trim() + res?.type.slice(1)}`); //Classe per assegnare il background-color
 
   idEl.className = "pokemon_id";
   imgEl.className = "pokemon_img";
