@@ -1,0 +1,256 @@
+/* GENERAL */
+
+:root {
+  --primary-bg: #f5c556;
+}
+
+body {
+  background: var(--primary-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* HEADER */
+header {
+  align-items: center;
+  text-align: center;
+}
+
+header img {
+  width: 60%;
+  padding-bottom: 20px;
+}
+
+/* SECTION */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* FORM */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px #c04949, 15px 15px 1px 2px black;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 5px solid black;
+  background: #f8f4e5;
+  min-width: 200px;
+  padding-left: 5px;
+  outline: none;
+  color: black;
+}
+
+input:focus {
+  border-bottom: 5px solid #c04949;
+}
+
+.btn-submit {
+  display: block;
+  margin: 0 auto;
+  line-height: 40px;
+  font-weight: bold;
+  padding: 0 20px;
+  background: #c04949;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  outline: none;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: black;
+  color: white;
+  border: 2px solid black;
+}
+
+/* LIST* */
+
+.list {
+  padding-top: 30px;
+}
+
+.pokemon-list li {
+  padding-left: 0px;
+}
+
+.list ul {
+  list-style-type: none;
+}
+
+li {
+  background: #f8f4e5;
+  border: 2px solid black;
+  line-height: 25px;
+  margin: 20px 0px;
+  padding: 5px;
+}
+
+.list h1 {
+  text-align: center;
+}
+
+/* CARD */
+
+.pokemon_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+  padding-top: 25px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px rgba(65, 65, 65, 0.705);
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  margin: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.card h1 {
+  font-size: 20px;
+  margin-top: 10px;
+  text-transform: capitalize;
+}
+
+.pokemon_id {
+  margin: 0;
+  background-color: rgba(185, 185, 185, 0.37);
+  border-radius: 16px;
+  padding: 6px 20px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.pokemon_delete {
+  font-variant: small-caps;
+  font-size: 1rem;
+  padding: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  padding: 6px 20px;
+  font-weight: 700;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.pokemon_delete:hover {
+  background: black;
+  color: white;
+  border: 2px solid black;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/*UTILITIES*/
+.bg-grass {
+  background-color: #defde0;
+}
+
+.bg-electric {
+  background-color: #fcf7de;
+}
+
+.bg-water {
+  background-color: #def3fd;
+}
+
+.bg-ground {
+  background-color: #f4e7da;
+}
+
+.bg-rock {
+  background-color: #d5d5d4;
+}
+
+.bg-fairy {
+  background-color: #fceaff;
+}
+
+.bg-poison {
+  background-color: #98d7a5;
+}
+
+.bg-bug {
+  background-color: #f8d5a3;
+}
+
+.bg-dragon {
+  background-color: #97b3e6;
+}
+
+.bg-psychic {
+  background-color: #eaeda1;
+}
+
+.bg-flying {
+  background-color: #f5f5f5;
+}
+
+.bg-fighting {
+  background-color: #e6e0d4;
+}
+
+.bg-normal {
+  background-color: #f5f5f5;
+}
+
+.bg-fire {
+  background-color: #fddfdf;
+}
+
+.bg-ghost {
+  background-color: #705898;
+}
+
+.bg-ice {
+  background-color: #98d8d8;
+}
+
+@media (min-width: 728px) {
+  body {
+    background: url("../img/pkm-bg.webp") center 20% repeat;
+    background-size: cover;
+  }
+}
