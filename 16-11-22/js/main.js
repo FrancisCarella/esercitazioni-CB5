@@ -1,5 +1,5 @@
 import { GET, POST, DELETE } from "./api.js";
-import { c, q, uuidv4 } from "./utils.js";
+import { c, q} from "./utils.js";
 const url = "http://localhost:3000/pokemon";
 
 const form = document.forms.pokemon;
@@ -12,7 +12,6 @@ const ul = q(".pokemon_list");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const data = {
-    // id: uuidv4(),
     name: element.pkmName.value,
     type: element.pkmType.value,
   };

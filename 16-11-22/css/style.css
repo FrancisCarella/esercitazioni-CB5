@@ -129,6 +129,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(224, 224, 224);
   width: 180px;
   border-radius: 10px;
   box-shadow: 1px 1px 15px rgba(65, 65, 65, 0.705);
@@ -147,6 +148,10 @@ li {
   font-size: 20px;
   margin-top: 10px;
   text-transform: capitalize;
+}
+
+.card p {
+  margin: 0;
 }
 
 .pokemon_id {
