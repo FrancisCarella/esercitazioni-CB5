@@ -1,50 +1,58 @@
-import { q, getId, GET } from './utils.js'
+import { q, getId, GET } from "./utils.js";
 
-const postId = q(".post-id")
-const userAvatar = q(".user-avatar")
-const postTitle = q(".post-title")
-const userId = q(".user-id")
-const postBody = q(".post-body")
-const btnPrev = q(".btn-prev")
-const btnNext = q(".btn-next")
+
+const postId = q(".post-id");
+const userAvatar = q(".user-avatar");
+const postTitle = q(".post-title");
+const userId = q(".user-id");
+const postBody = q(".post-body");
+const btnPrev = q(".btn-prev");
+const btnNext = q(".btn-next");
+const loader = q(".loader");
+const card = q(".card");
+const btns = q(".btns");
+
 
 // GLOBAL VARIABLES
 const url = "https://jsonplaceholder.typicode.com/posts";
 let index = 1;
 
 // BTN EVENT LISTENERS
-btnPrev.addEventListener('click', (e) => {
-	let instruction = e.target.textContent;
-	getPost(instruction)
-})
+btnPrev.addEventListener("click", (e) => {
+  let instruction = e.target.textContent;
+  getPost(instruction);
+});
 
-btnNext.addEventListener('click', (e) => {
-	let instruction = e.target.textContent;
-	getPost(instruction)
-})
-
+btnNext.addEventListener("click", (e) => {
+  let instruction = e.target.textContent;
+  getPost(instruction);
+});
 
 const getPost = (instruction) => {
 
-	if (!instruction) {
-		instruction = 1;
-	} else {
-		instruction = instruction.toLowerCase();
-	};
+  loader.classList.toggle("display-none");
+  card.classList.toggle("display-none");
+  btns.classList.toggle("display-none");
 
-	switch (instruction) {
-		case 'prev':
-			index = index - 1;
-			break;
-		case 'next':
-			index = index + 1;
-			break;
-		default:
-			index = instruction;
-	}
+  if (!instruction) {
+    instruction = 1;
+  } else {
+    instruction = instruction.toLowerCase();
+  }
 
-	GET(`${url}/${index}`)
-		.then(res => {
+  switch (instruction) {
+    case "prev":
+      index = index - 1;
+      break;
+    case "next":
+      index = index + 1;
+      break;
+    default:
+      index = instruction;
+  }
+
+  GET(`${url}/${index}`)
+    .then((res) => {
       postId.textContent = `Post n° ${getId(res?.id)}`;
       postTitle.textContent = res?.title[0].toUpperCase() + res?.title.slice(1); //Inserimento del titolo con la prima lettera maiuscola
       userId.textContent = `User ${getId(res?.id)}`;
@@ -70,6 +78,11 @@ const getPost = (instruction) => {
         btnNext.classList.remove("disabled");
       }
     })
-}
+    .finally(() => {
+      loader.classList.toggle("display-none");
+      card.classList.toggle("display-none");
+      btns.classList.toggle("display-none");
+    });
+};
 
 window.onload = getPost();
