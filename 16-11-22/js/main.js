@@ -1,5 +1,5 @@
 import { GET, POST, DELETE } from "./api.js";
-import { c, q} from "./utils.js";
+import { c, q } from "./utils.js";
 const url = "http://localhost:3000/pokemon";
 
 let id;
@@ -14,9 +14,9 @@ const ul = q(".pokemon_list");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const data = {
-    id: id+1,
+    id: id + 1,
     name: element.pkmName.value,
-    type: element.pkmType.value
+    type: element.pkmType.value,
   };
 
   POST(url, data)
@@ -29,18 +29,19 @@ form.addEventListener("submit", (e) => {
     });
 });
 
-//FORM CHECK IMPUT
+//FORM CHECK INPUT
 const input = document.querySelector("input");
 input.addEventListener("keyup", checkInput);
 function checkInput() {
   if (!/^[a-z0-9]*$/i.test(this.value))
     alert("Carattere non consentito!"), location.reload();
-};
+}
 
 //FORM LIST
 window.onload = GET(url).then((res) =>
   res.map(
-    (pkm) => (ul.innerHTML += `<li>#${pkm.id} ${pkm.name}, ${pkm.type}</li>`)
+    (pkm) =>
+      (ul.innerHTML += `<li>#${pkm.id} - ${pkm.name} - Type: ${pkm.type}</li>`)
   )
 );
 
@@ -54,7 +55,9 @@ const createCard = (res, parent) => {
   const btnEl = c("button");
 
   cardEl.className = "card";
-  cardEl.classList.add(`bg-${res?.type[0].toLowerCase().trim() + res?.type.slice(1)}`); //Classe per assegnare il background-color
+  cardEl.classList.add(
+    `bg-${res?.type[0].toLowerCase().trim() + res?.type.slice(1)}`
+  ); //Classe per assegnare il background-color
 
   idEl.className = "pokemon_id";
   imgEl.className = "pokemon_img";
@@ -75,15 +78,16 @@ const createCard = (res, parent) => {
 
   cardEl.append(imgEl, idEl, nameEl, typeEl, btnEl);
   parent.append(cardEl);
+
+  // if (res.type === "water") {
+  //   console.log("true");
+  // } else {
+  //   console.log("false");
+  // }
 };
 
-//CARD LIST
-// window.onload = GET(url).then((res) =>
-//   res.map((res) => createCard(res, container))
-// );
-
 window.onload = GET(url).then((res) => {
-  id = res[res.length-1].id;
+  id = res[res.length - 1].id;
   res.map((res) => {
     createCard(res, container);
   });
