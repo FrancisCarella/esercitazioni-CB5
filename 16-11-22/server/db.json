@@ -7,18 +7,23 @@
     },
     {
       "id": 2,
-      "name": "Charizard",
-      "type": "Fire"
+      "name": "Pikachu",
+      "type": "Electric"
     },
     {
       "id": 3,
-      "name": "Blastoise",
+      "name": "Squirtle",
       "type": "Water"
     },
     {
       "id": 4,
-      "name": "Charmender",
+      "name": "Charmander",
       "type": "Fire"
+    },
+    {
+      "id": 5,
+      "name": "Caterpie",
+      "type": "bug"
     }
   ]
 }

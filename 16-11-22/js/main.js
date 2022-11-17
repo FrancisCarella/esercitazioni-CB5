@@ -72,18 +72,20 @@ const createCard = (res, parent) => {
   idEl.textContent = "# " + res.id;
   nameEl.textContent = res.name;
   typeEl.textContent = `Type: ${res.type}`;
-  imgEl.setAttribute("src", `https://picsum.photos/200?${res?.id}`);
+  // imgEl.setAttribute("src", `https://picsum.photos/200?${res?.id}`);
+  imgEl.setAttribute(
+    "src",
+    `./img/${res?.name[0].toLowerCase() + res?.name.slice(1)}.svg`
+  );
+  imgEl.addEventListener("error", function (event) {
+    event.target.src = `./img/avatar_placeholder.png`;
+    event.onerror = null;
+  });
   imgEl.setAttribute("alt", "image");
   btnEl.textContent = "delete";
 
   cardEl.append(imgEl, idEl, nameEl, typeEl, btnEl);
   parent.append(cardEl);
-
-  // if (res.type === "water") {
-  //   console.log("true");
-  // } else {
-  //   console.log("false");
-  // }
 };
 
 window.onload = GET(url).then((res) => {
