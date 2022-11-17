@@ -42,5 +42,5 @@ inputEl.addEventListener("keyup", (e) => {
   const filteredProd = productsList.filter((prod) => {
     return prod.title.includes(searchString);
   });
-  console.log(filteredProd);
+  console.log(filteredProd);//restituzione del filtro in console.log ma senza riuscire nel mostrarlo a schermo a schermo
 });
