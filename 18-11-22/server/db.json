@@ -1,0 +1,29 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "type": "Grass"
+    },
+    {
+      "id": 2,
+      "name": "Pikachu",
+      "type": "Electric"
+    },
+    {
+      "id": 3,
+      "name": "Squirtle",
+      "type": "Water"
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "type": "Fire"
+    },
+    {
+      "id": 5,
+      "name": "Caterpie",
+      "type": "Bug"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fdcc Pokemon Select & Edit</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+</head>
+
+<body>
+  <section class="container">
+
+    <!-- Header -->
+    <header>
+      <img class="logo" src="./img/pokemon-logo.png" alt="pokedex_logo.png" />
+    </header>
+    <!-- End Header -->
+
+    <!-- Form Section -->
+    <form name="pokemonInsert">
+      <input type="text" name="pkmName" placeholder="Insert Pokemon Name (as Pikachu or Squirtle)" required />
+      <input type="text" name="pkmType" placeholder="Insert Pokemon Type (as Water or Fire)" required />
+      <input class="btn-submit" type="submit" value="SUBMIT CARD" />
+    </form>
+    <br><br>
+    <form name="pokemonEdit" id="edit-form">
+      <input type="text" placeholder="Insert ID" name="id" />
+      <input type="text" name="pkmName" placeholder="Insert New Name" required />
+      <input type="text" name="pkmType" placeholder="Insert New Type" required />
+      <input class="btn-submit" type="submit" value="EDIT CARD" />
+    </form>
+    <!-- End Form Section -->
+
+    <!-- List Section -->
+    <div class="list">
+      <h1>LISTA POKEMON</h1>
+      <ul class="pokemon_list"></ul>
+    </div>
+    <!-- End List Section -->
+
+    <!-- Card Section -->
+    <div class="pokemon_container"></div>
+    <!-- End Card Section -->
+
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <h4>Made with ❤️ by Fdcc<br>Copyright 2022 ®</h4>
+  </footer>
+  <!-- End Footer Section -->
+
+  <script type="module" src="./js/main.js"></script>
+  <script type="module" src="./js/utils.js"></script>
+  <script type="module" src="./js/api.js"></script>
+</body>
+
+</html>
