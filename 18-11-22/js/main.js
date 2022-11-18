@@ -3,11 +3,12 @@ import { c, q } from "./utils.js";
 const url = "http://localhost:3000/pokemon";
 
 let id;
+let productsList = [];
 
 const form = document.forms.pokemonInsert;
 const element = form.elements;
+const inputEl = q(".search-input");
 const container = q(".pokemon_container");
-
 const ul = q(".pokemon_list");
 
 //FORM SUBMIT
@@ -37,7 +38,7 @@ function checkInput() {
     alert("Carattere non consentito!"), location.reload();
 }
 
-// Form Patch
+// FORM PATCH
 const formPatch = document.forms.pokemonEdit;
 const elementsFP = formPatch.elements;
 
@@ -118,6 +119,8 @@ const createCard = (res, parent) => {
 
   cardEl.append(imgEl, idEl, nameEl, typeEl, btnEditEl, btnDelEl);
   parent.append(cardEl);
+
+  // console.log(cardEl);
 };
 
 window.onload = GET(url).then((res) => {
@@ -125,4 +128,23 @@ window.onload = GET(url).then((res) => {
   res.map((res) => {
     createCard(res, container);
   });
+});
+
+// SEARCH BAR
+
+GET(url).then((data) => {
+  productsList = data.filter((res) => res.id <= 10);
+  productsList.map(res);
+});
+
+inputEl.addEventListener("input", (e) => {
+  const searchString = e.target.value;
+
+  container.replaceChildren();
+
+  console.log(
+    productsList
+      .filter((res) => res?.name.toLowerCase().includes(searchString))
+      .map((res) => createCard(res, container))
+  );
 });

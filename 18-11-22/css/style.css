@@ -115,6 +115,47 @@ li {
 
 /* CARD */
 
+#search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  flex-direction: row;
+  background: #f8f4e5;
+  animation: fadein 3s;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 2px solid black;
+}
+
+.search-input {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0px;
+  border: none;
+  border-bottom: 5px solid black;
+  background: #f8f4e5;
+  padding-left: 5px;
+  outline: none;
+  color: black;
+}
+
+.search-input:focus {
+  border-bottom: 5px solid #c04949;
+}
+
+i {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0px;
+  background: #f8f4e5;
+  padding: 0 10px;
+  outline: none;
+  color: black;
+}
+
 .pokemon_container {
   display: flex;
   flex-wrap: wrap;
