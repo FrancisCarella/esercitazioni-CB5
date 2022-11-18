@@ -37,10 +37,13 @@ GET(BASE_URL).then((data) => {
   productsList.map((product) => createCardEl(product, cardList));
 });
 
-inputEl.addEventListener("keyup", (e) => {
+inputEl.addEventListener("input", (e) => {
   const searchString = e.target.value;
-  const filteredProd = productsList.filter((prod) => {
-    return prod.title.includes(searchString);
-  });
-  console.log(filteredProd);//restituzione del filtro in console.log ma senza riuscire nel mostrarlo a schermo a schermo
+
+  cardList.replaceChildren();
+
+  productsList
+    .filter(product => product?.title.includes(searchString))
+    .map(product => createCardEl(product, cardList))
+
 });
