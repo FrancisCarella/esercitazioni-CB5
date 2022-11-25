@@ -13,6 +13,10 @@ const btn2 = formElement.btnSot;
 const btn3 = formElement.btnMol;
 const btn4 = formElement.btnDiv;
 
+//if (false) {
+  // Not reachable
+//}
+
 if (btn1) {
   btn1.addEventListener("click", (e) => {
     e.preventDefault();

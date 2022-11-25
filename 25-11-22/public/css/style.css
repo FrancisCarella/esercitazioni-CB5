@@ -4,14 +4,17 @@
   font-family: sans-serif;
 }
 
+h4 {
+  margin: 0;
+}
+
 body {
-   background-image: url("../img/calc-bg.png");
+  background-image: url("../img/calc-bg.png");
   background-size: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 /* HEADER */
@@ -20,9 +23,9 @@ header {
   text-align: center;
 }
 
-header img {
-  width: 60%;
-  padding-bottom: 20px;
+header h1 {
+ color:#00ff9d;
+ font-size: 4rem;
 }
 
 /* SECTION */
@@ -31,11 +34,11 @@ header img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 auto;
   text-align: center;
-    background: #ffffff;
+  background: #ffffff;
   padding: 50px;
   border: 2px solid black;
+  box-shadow: 15px 15px 1px #00ff9d, 15px 15px 1px 2px black;
 }
 
 a {
@@ -90,9 +93,14 @@ input:focus {
 /* FOOTER */
 
 footer {
+      position: absolute;
+    bottom: 15px;
+  background-color: white;
   text-align: center;
-  color: var(--primary-color);
-  padding-top: 20px;
+  color: black;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 45px;
 }
 
 @media (min-width: 728px) {
