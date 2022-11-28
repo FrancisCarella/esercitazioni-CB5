@@ -1,0 +1,114 @@
+/* GENERAL */
+
+* {
+  font-family: sans-serif;
+}
+
+h4 {
+  margin: 0;
+}
+
+body {
+  background-image: url("../img/calc-bg.png");
+  background-size: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HEADER */
+header {
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+ color:#ff0000;
+ font-size: 4rem;
+}
+
+/* SECTION */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #ffffff;
+  padding: 50px;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px #00ff9d, 15px 15px 1px 2px black;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+input {
+  display: block;
+  width: 200px;
+  font-size: 1.2rem;
+  padding-left: 10px;
+  padding: 10px;
+  border: 1px solid #00ff9d;
+  border-radius: 3px;
+}
+
+input:focus {
+  border: 5px solid #00ff9d;
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  margin: 10px auto;
+  line-height: 10px;
+  font-weight: bold;
+  padding: 10px;
+  background: #ffffff;
+  transition: 0.2s all ease-in-out;
+  outline: none;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: black;
+  color: white;
+  border: 2px solid black;
+}
+
+/* FOOTER */
+
+footer {
+      position: absolute;
+    bottom: 15px;
+  background-color: white;
+  text-align: center;
+  color: black;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 45px;
+}
+
+@media (min-width: 728px) {
+  body {
+    background-color: var(--primary-bg);
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
