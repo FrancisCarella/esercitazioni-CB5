@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fdcc Actor Selector</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+</head>
+
+<body>
+    <section class="container">
+
+        <!-- Header -->
+        <header>
+            <img class="logo" src="./img/cine_logo.png" alt="cine_logo.png" />
+        </header>
+        <!-- End Header -->
+
+        <!-- Form Section -->
+        <div class="form-block">
+            <div class="form-containter">
+                <form name="actorInsert" class="inputs">
+                    <input type="text" name="actorName" placeholder="Insert Actor Name" required />
+                    <input type="text" name="actorSurname" placeholder="Insert Actor Surname" required />
+                    <input type="text" name="actorDate" placeholder="Insert Actor Birdthday" required />
+                    <input class="btn-submit" type="submit" value="CREATE ACTOR CARD" />
+                </form>
+            </div>
+            <div class="form-containter">
+                <form name="actorEdit" id="edit-form" class="inputs">
+                    <input type="text" name="nameSurnameActor" placeholder="Insert Name Surname Actor" />
+                    <input type="text" name="actorName" placeholder="Insert New Name" required />
+                    <input type="text" name="actorSurname" placeholder="Insert New Surname" required />
+                    <input type="text" name="actorDate" placeholder="Insert New Actor Birdthday" required />
+                    <input class="btn-submit" type="submit" value="EDIT ACTOR CARD" />
+                </form>
+            </div>
+            <div id="search-form">
+                <input class="search-input" type="text" placeholder="Search an actor..." />
+            </div>
+        </div>
+        <!-- End Form Section -->
+
+        <!-- Card Section -->
+        <div class="attori"></div>
+        <div class="registi"></div>
+        <!-- End Card Section -->
+
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <h4>Made with ❤️ by Fdcc<br>Copyright 2022 ®</h4>
+    </footer>
+    <!-- End Footer Section -->
+    <script type="text/javascript" src="./js/script.js"></script>
+</body>
+
+</html>
