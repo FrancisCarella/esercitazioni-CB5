@@ -1,0 +1,149 @@
+/* START CSS FDCC */
+
+.btn {
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  background-color: #c62d1f;
+  border-radius: 18px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+  background-color: #f24437;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+
+.message-off {
+  display: none;
+}
+
+.message-on {
+  display: block;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {
+    transform: translatey(10vh);
+    opacity: 0;
+  }
+
+  to {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+}
+
+.fadeinout {
+  animation: fadeinout 2s;
+}
+
+@keyframes fadeinout {
+  from {
+    transform: translatey(0px);
+    opacity: 1;
+  }
+
+  to {
+    transform: translatey(10vh);
+    opacity: 0;
+  }
+}
+
+#message {
+  padding-top: 5vh;
+  font-size: 1.2rem;
+}
+
+#message h5,h3 {
+margin: 5px;
+}
+
+.nav-social a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 10px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.nav-social a:hover {
+  transition: 0.5s;
+  transform: rotate(360deg);
+}
+
+.fa-globe {
+  background: #d2bb10;
+}
+
+.fa-linkedin-in {
+  background: #007bb5;
+}
+
+.fa-instagram {
+  background: #125688;
+}
+
+.fa-github {
+  background: #2c4762;
+}
+
+.fa-envelope {
+  background: #bb0000;
+}
+/* END CSS FDCC */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 25vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding-top: 20vh;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
