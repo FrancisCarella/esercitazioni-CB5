@@ -1,4 +1,26 @@
-export function Button() {
+import "./button.css";
+
+export const Button = (props) => {
+  console.log("props di Button:", props);
+
+  const {
+    children = "click me",
+    className = "",
+    variant = "none",
+    ...otherAttributes
+  } = props;
+
+  return (
+    <button
+      className={`btn btn--variant-${variant} ${className}`}
+      {...otherAttributes}
+    >
+      {children}
+    </button>
+  );
+};
+
+/*export function Button() {
   const message = (e) => {
     e.preventDefault();
     console.log("Ciao! Sono un Hello Word in console!");
@@ -19,4 +41,4 @@ export function Button() {
         Click me and wait five seconds!
       </button>
   );
-}
+}*/
