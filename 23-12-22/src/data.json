@@ -1,0 +1,21 @@
+[{
+   "id": 1,
+   "task": "Completare con successo il Bootcamp",
+   "complete": false
+ }, {
+   "id": 2,
+   "task": "Guadagnare tanti bei dindini",
+   "complete": false
+ }, {
+   "id": 3,
+   "task": "Riprendere con la palestra",
+   "complete": false
+ }, {
+   "id": 4,
+   "task": "Leggere valanga di libri acquistati e non letti",
+   "complete": false
+ }, {
+   "id": 5,
+   "task": "Montare Lego di Ritorno al Futuro",
+   "complete": false
+ }]
