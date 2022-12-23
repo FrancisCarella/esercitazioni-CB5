@@ -15,20 +15,17 @@ function App() {
             <img src="fdcc-logo.png" className="App-logo" alt="logo" />
           </Container>
           <Container>
-            <Text as='h1'
-              content="Hello World! I'm Francesco De Caro Carella!">
-            </Text>
+            <Text as='h1'>
+            Hello World! <br></br>I'm Francesco De Caro Carella!</Text>
           </Container>
           <div>
             <Text
               as="h2"
-              content="Quizzone 2022 - Parte 2°"
               variant="title"
-            ></Text>
+            >Quizzone 2022 - Parte 2°</Text>
             <Text
               as="h3"
-              content="A quando risale la scoperta dell'America?"
-            ></Text>
+            >A quando risale la scoperta dell'America?</Text>
             <div className="btns-container">
               <Button
                 variant=""

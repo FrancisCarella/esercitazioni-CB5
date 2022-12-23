@@ -8,7 +8,7 @@ const variantObj = {
 export const Text = (props) => {
   const {
     as = "div",
-    content = "title",
+    children = "title",
     variant = "body",
     ...attributes
   } = props;
@@ -16,7 +16,7 @@ export const Text = (props) => {
   const Element = as;
   return (
     <Element className={`txt ${variantObj[variant] ?? ""}`} {...attributes}>
-      {content}
+      {children}
     </Element>
   );
 };
