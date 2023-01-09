@@ -1,0 +1,61 @@
+.Footer {
+  display: block;
+  animation: fadein 2s;
+  padding-bottom: 1em;
+  font-size: 1.2rem;
+
+  @keyframes fadein {
+    from {
+      transform: translatey(10vh);
+      opacity: 0;
+    }
+
+    to {
+      transform: translatey(0px);
+      opacity: 1;
+    }
+  }
+
+  h5,
+  h3 {
+    margin: 5px;
+  }
+
+  .nav-social {
+    
+    a {
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px 10px;
+      margin: 5px;
+      border-radius: 50%;
+    }
+
+    a:hover {
+      transition: 0.5s;
+      transform: rotate(360deg);
+    }
+
+    .fa-globe {
+      background: #d2bb10;
+    }
+
+    .fa-linkedin-in {
+      background: #007bb5;
+    }
+
+    .fa-instagram {
+      background: #125688;
+    }
+
+    .fa-github {
+      background: #2c4762;
+    }
+
+    .fa-envelope {
+      background: #bb0000;
+    }
+  }
+}
