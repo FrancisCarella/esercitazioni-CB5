@@ -1,0 +1,19 @@
+.Counter :is(button, output) {
+    background: transparent;
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+.Reset {
+    background-color: red !important;
+    color: white;
+    font-weight: bold;
+}
+
+.Output {
+    color: red;
+}
