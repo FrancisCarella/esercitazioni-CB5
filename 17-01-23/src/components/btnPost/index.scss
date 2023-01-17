@@ -1,0 +1,23 @@
+.NewPostContainer {
+  width: 480px;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+
+  .NewPost {
+    position: relative;
+  }
+
+  .NewPostBtn {
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 100px;
+    right: 25px;
+    padding: 2px 15px 8px 15px;
+    font-size: 2rem;
+    border: 2px solid #000000;
+    border-radius: 100%;
+    z-index: 2;
+    cursor: pointer;
+  }
+}

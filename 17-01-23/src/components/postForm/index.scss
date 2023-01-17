@@ -1,0 +1,32 @@
+.NewMsgPost {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0;
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+}
+
+form input {
+  padding: 4px 2px 4px 12px;
+  height: 30px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.tw-btn {
+  background-color: var(--primary-color);
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer
+}
+}
