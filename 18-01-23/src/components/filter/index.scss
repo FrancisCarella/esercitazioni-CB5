@@ -1,0 +1,23 @@
+.Filter {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding-top: 20px;
+  width: 100%;
+
+    input {
+    padding-left: 10px;
+    border-radius: 2px;
+    width: 100%;
+  }
+
+  .tw-btn {
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+}

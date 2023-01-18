@@ -1,0 +1,18 @@
+Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 100px;
+  background-color: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1em 0;
+  width: 100%;
+  //position: fixed;
+  //top: 0;
+  //z-index: 1;
+
+  .icon {
+    width: 2rem;
+    cursor: pointer;
+  }
+}
