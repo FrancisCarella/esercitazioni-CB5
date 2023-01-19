@@ -1,0 +1,64 @@
+:root {
+  --primary-color: rgb(0, 172, 238);
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+input,
+button {
+  border: none;
+}
+
+.App {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+
+  .LeftSection {
+    display: none;
+  }
+
+  .MainSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .RightSection {
+    display: none;
+  }
+}
+
+@media (min-width: 800px) {
+  .MainSection {
+    width: 60%;
+  }
+
+  .LeftSection {
+    display: block;
+    width: 10%;
+  }
+
+  .RightSection {
+    display: block;
+    width: 30%;
+  }
+}

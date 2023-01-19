@@ -1,0 +1,27 @@
+.SuggestedUserListContainer {
+padding: 20px;
+  .TitleContainer {
+    font-weight: bold;
+    padding: 0px 20px;
+  }
+
+  .SuggestedUserList {
+    padding: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  .SuggestedUserList::-webkit-scrollbar {
+    height: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+
+  .SuggestedUserList::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #007bb5;
+  }
+}
