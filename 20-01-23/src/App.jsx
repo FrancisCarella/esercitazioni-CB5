@@ -15,7 +15,9 @@ function App() {
 
   return (
     <div className="App">
-      {/*<div className="LeftSection"></div>*/}
+      <div className="LeftSection">
+        <div></div>
+      </div>
       <div className="MainSection">
         {isModalEnabled && (
           <Modal>
@@ -23,10 +25,13 @@ function App() {
           </Modal>
         )}
         <Filter setFilterState={setFilterState} />
-          <SuggestedUsersList />
+        <SuggestedUsersList />
         <PostCardsList nPost={"full"} filterSearch={filterState} />
       </div>
-      {/*<div className="RightSection"></div>*/}
+      <div className="RightSection">
+        <div>
+        </div>
+      </div>
       <BtnPost isModalEnabled={isModalEnabled} funcPostForm={onHandleModal} />
     </div>
   );

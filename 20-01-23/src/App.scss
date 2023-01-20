@@ -36,31 +36,44 @@ button {
 
   .LeftSection {
     display: none;
+    padding-top: 100px;
   }
 
   .MainSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 100px;
   }
 
   .RightSection {
     display: none;
+    padding-top: 100px;
   }
 }
 
 @media (min-width: 800px) {
+  .App {
+  background-color: #000000;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
   .MainSection {
-    width: 60%;
+    width: 34%;
+    display: flex;
+    justify-content: center;
+    border: var(--primary-border);
   }
 
   .LeftSection {
     display: block;
-    width: 10%;
+    width: 33%;
   }
 
   .RightSection {
     display: block;
-    width: 30%;
+    width: 33%;
   }
+}
 }
