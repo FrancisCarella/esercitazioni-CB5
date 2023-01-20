@@ -1,14 +1,12 @@
 import "./App.scss";
 import { useState } from "react";
 
-import Header from "./components/header";
 import PostForm from "./components/postForm";
 import Filter from "./components/filter";
 import Modal from "./components/modal";
 import SuggestedUsersList from "./components/suggestedUsersList";
 import PostCardsList from "./components/postCardsList";
 import BtnPost from "./components/btnPost";
-import Footer from "./components/footer";
 
 function App() {
   const [filterState, setFilterState] = useState("");
