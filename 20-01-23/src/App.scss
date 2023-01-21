@@ -52,7 +52,27 @@ button {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
+  .App {
+  background-color: #000000;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+
+  .MainSection {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    border: var(--primary-border);
+  }
+
+  .LeftSection {
+    display: block;
+    width: 20%;
+  }
+}
+}
+@media (min-width: 1024px) {
   .App {
   background-color: #000000;
     flex-direction: row;

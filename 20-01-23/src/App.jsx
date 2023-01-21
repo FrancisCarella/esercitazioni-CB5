@@ -1,6 +1,6 @@
 import "./App.scss";
 import { useState } from "react";
-
+import NavBar from "./components/navBar";
 import PostForm from "./components/postForm";
 import Filter from "./components/filter";
 import Modal from "./components/modal";
@@ -16,7 +16,9 @@ function App() {
   return (
     <div className="App">
       <div className="LeftSection">
-        <div></div>
+        <div>
+          <NavBar />
+        </div>
       </div>
       <div className="MainSection">
         {isModalEnabled && (
@@ -29,8 +31,7 @@ function App() {
         <PostCardsList nPost={"full"} filterSearch={filterState} />
       </div>
       <div className="RightSection">
-        <div>
-        </div>
+        <div></div>
       </div>
       <BtnPost isModalEnabled={isModalEnabled} funcPostForm={onHandleModal} />
     </div>
