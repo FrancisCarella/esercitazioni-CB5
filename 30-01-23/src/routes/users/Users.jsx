@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/https";
-import UsersItems from "../userCard/UsersItems";
+import UserCard from "../userCard/UserCard";
 
 const Users = () => {
   const [usersList, setUsersList] = useState([]);
@@ -16,7 +16,7 @@ const Users = () => {
         <h2>USERS PAGE</h2>
         <div className={styles.container}>
           {usersList.map((item, index) => (
-            <UsersItems data={item} key={index} />
+            <UserCard data={item} key={index} />
           ))}
         </div>
       </div>

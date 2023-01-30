@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import { useNavigate } from "react-router-dom";
 
-const UsersItems = ({ data }) => {
+const UserCard = ({ data }) => {
   const navigate = useNavigate();
 
   const redirectHandler = (url) => {
@@ -15,12 +15,10 @@ const UsersItems = ({ data }) => {
         <h4>
           {data.firstName} {data.lastName}
         </h4>
-        <button onClick={() => redirectHandler(`${data.id}`)}>
-          INFO
-        </button>
+        <button onClick={() => redirectHandler(`${data.id}`)}>INFO</button>
       </div>
     </div>
   );
 };
 
-export default UsersItems;
+export default UserCard;
