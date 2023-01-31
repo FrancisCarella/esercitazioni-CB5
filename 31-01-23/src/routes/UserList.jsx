@@ -1,7 +1,7 @@
-import styles from "./styles.module.scss";
+import styles from "./userlist.module.scss";
 import { useState, useEffect } from "react";
-import { GET } from "../../utils/https";
-import UserCard from "../userCard/UserCard";
+import { GET } from "../utils/https";
+import UserCard from "../components/userCard/UserCard";
 
 const Users = () => {
   const [usersList, setUsersList] = useState([]);

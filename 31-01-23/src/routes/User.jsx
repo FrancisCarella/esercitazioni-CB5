@@ -1,7 +1,7 @@
-import styles from "./styles.module.scss";
+import styles from "./user.module.scss";
 import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { GET } from "../../utils/https.js";
+import { GET } from "../utils/https.js";
 
 const User = () => {
   let { userId } = useParams();

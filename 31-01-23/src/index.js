@@ -1,9 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Users from "./routes/users/Users";
-import User from "./routes/user/User";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Link,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
+
 import App from "./App";
+import UserList from "./routes/UserList";
+import User from "./routes/User";
+
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -13,7 +21,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/users",
-    element: <Users />,
+    element: <UserList />,
   },
   {
     path: "/users/:userId",
