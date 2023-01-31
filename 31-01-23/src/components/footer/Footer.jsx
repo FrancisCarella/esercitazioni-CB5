@@ -2,7 +2,7 @@ import styles from "./index.module.scss";
 
 const Footer = () => {
   return (
-    <footer className="Footer">
+    <footer className={styles.Footer}>
       <a href="#" className={styles.icon}>
         <img src="img/tw-home-w.svg" alt="" />
       </a>
