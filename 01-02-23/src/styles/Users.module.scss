@@ -1,0 +1,13 @@
+.Main {
+  padding: 10px;
+  padding-top: 100px;
+
+  .users {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+}
