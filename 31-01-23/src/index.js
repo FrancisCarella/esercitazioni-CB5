@@ -9,10 +9,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from "./App";
-//import Posts from "./routes/PostList";
+import PostList from "./routes/PostList";
 import MainLayout from "./layouts/mainLayout";
 import UserList from "./routes/UserList";
 import User from "./routes/User";
+import Post from "./routes/Post";
 
 import "./index.css";
 /*
@@ -38,6 +39,8 @@ const router = createBrowserRouter(
       <Route path="/" element={<App />} />
       <Route path="/users" element={<UserList />} />
       <Route path="/users/:userId" element={<User />} />
+      <Route path="/posts" element={<PostList />} />
+      <Route path="/posts/:postId" element={<Post />} />
     </Route>
   )
 );

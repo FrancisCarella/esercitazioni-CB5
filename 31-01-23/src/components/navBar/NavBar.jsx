@@ -12,7 +12,7 @@ const NavBar = () => {
         </span>
         <br></br>
         <span>
-          <Link to="/users">POST</Link>
+          <Link to="/posts">POST</Link>
         </span>
       </li>
     </div>

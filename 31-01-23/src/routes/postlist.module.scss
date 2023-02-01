@@ -1,20 +1,18 @@
-.Users {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 100px;
+.Posts {
+    padding-top: 100px;
 
   .wrapper {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    
 
     .container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 2rem;
     }
   }
 }
