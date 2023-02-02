@@ -1,0 +1,25 @@
+.title {
+  padding-top: 6rem;
+  padding-bottom: 1rem;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image {
+    width: 100%;
+    object-fit: cover;
+    transition: 0.2s;
+  }
+
+  .image:hover {
+    transform: scale(1.01);
+  }
+}

@@ -1,0 +1,18 @@
+.Test {
+  padding: 20px;
+  border: 2px solid red;
+
+  .Test__users {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid blue;
+  }
+
+  .Test__posts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid yellow;
+  }
+}
