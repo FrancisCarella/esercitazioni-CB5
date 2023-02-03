@@ -1,0 +1,13 @@
+.Header {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  align-items: center;
+  background-color: yellow;
+  display: flex;
+  height: 70px;
+  padding: 0px 10px;
+
+  .sectionRight {
+    position: absolute;
+    right: 0;
+  }
+}
