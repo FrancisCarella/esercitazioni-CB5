@@ -1,0 +1,22 @@
+.TodoItem {
+  background-color: #232323;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+
+  &:hover {
+    background-color: #303030;
+  }
+}
+
+.statusDone {
+  text-decoration: line-through;
+}
+
+.icon_statustrue {
+  display: block;
+}
+
