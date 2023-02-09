@@ -1,0 +1,23 @@
+.NoteContent {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(27, 27, 27);
+  text-align: left;
+  width:auto;
+  gap: 10px;
+  padding: 20px;
+
+  h1 {
+    cursor: pointer;
+  }
+
+  input {
+    width: fit-content;
+  };
+}
+
+@media screen and (min-width: 676px) {
+  .NoteContent {
+    width: 65%;
+  }
+}
